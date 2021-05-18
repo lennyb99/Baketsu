@@ -2,11 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState {
+    walking,
+    stopped
+}
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
     public float moveSpeed;
-    private Vector2 moveDirection;
+    private Vector3 moveDirection;
+
+    public PlayerState playerState;
 
     
 
@@ -14,7 +20,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerState = PlayerState.walking;
     }
 
     // Update is called once per frame
@@ -33,12 +39,18 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        moveDirection = new Vector2(moveX, moveY).normalized;
+        moveDirection = new Vector3(moveX, moveY, myRigidbody.transform.position.z).normalized;
     }
 
     void MovePlayer()
     {
-        myRigidbody.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+        if(playerState!=PlayerState.stopped){
+            myRigidbody.MovePosition(transform.position + moveDirection * moveSpeed * Time.deltaTime);
+        }
+    }
+
+    public void SetPlayerState(PlayerState plState){
+        playerState = plState;
     }
 
     
