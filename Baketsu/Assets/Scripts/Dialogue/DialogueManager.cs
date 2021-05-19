@@ -87,11 +87,13 @@ public class DialogueManager : MonoBehaviour
         
 
         // Die Position des Bildes vom Sprecher setzen
+        /*
         if(!right){
             speaker.transform.localPosition = new Vector3(-1690,133,0);
         }else{
             speaker.transform.localPosition = new Vector3(-173,133,0);
         }
+        */
 
         // Das Bild des Sprechers setzen
         speaker.sprite = portrait;
