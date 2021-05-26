@@ -25,11 +25,14 @@ public class RoomMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other){
 
-        if(other.CompareTag("Player")){
+        if(other.CompareTag("MovementHitbox")){
             cam.minPosition += cameraChange;
             cam.maxPosition += cameraChange;
 
-            other.transform.position += playerChange;
+            GameObject player = other.transform.parent.gameObject;
+            player.transform.position += playerChange;
+            
+            
         }
 
     }
