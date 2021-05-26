@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" infinite="0" nextlayerid="18" nextobjectid="11">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="25" height="25" tilewidth="32" tileheight="32" infinite="0" nextlayerid="19" nextobjectid="32">
  <tileset firstgid="1" source="grass.tsx"/>
  <tileset firstgid="65" source="trees.tsx"/>
  <tileset firstgid="321" source="props.tsx"/>
@@ -251,6 +251,36 @@
 </data>
  </layer>
  <objectgroup id="13" name="Map Border"/>
+ <objectgroup id="18" name="Object Collision">
+  <object id="11" x="417.01" y="-0.515464" width="93.299" height="127.835"/>
+  <object id="12" x="355.045" y="0.791186" width="25.7136" height="59.5368"/>
+  <object id="15" x="160.156" y="32.5521" width="191.732" height="127.279"/>
+  <object id="16" x="516.276" y="162.435" width="55.9896" height="23.763"/>
+  <object id="17" x="608.398" y="128.906" width="94.7266" height="127.279"/>
+  <object id="18" x="588.216" y="267.904" width="5.85938" height="19.5313"/>
+  <object id="19" x="579.427" y="259.115" width="25.3906" height="11.0677"/>
+  <object id="20" x="515.625" y="333.659" width="15.9505" height="49.8047"/>
+  <object id="21" x="532.878" y="323.568" width="7.16146" height="48.1771"/>
+  <object id="22" x="354.019" y="357.116" width="26.0044" height="23.1977">
+   <ellipse/>
+  </object>
+  <object id="24" x="451.102" y="323.617" width="24.3474" height="24.3474">
+   <ellipse/>
+  </object>
+  <object id="25" x="451.851" y="195.984" width="23.5906" height="24.5988">
+   <ellipse/>
+  </object>
+  <object id="26" x="353.47" y="270.549" width="90.8857" height="69.5697">
+   <ellipse/>
+  </object>
+  <object id="27" x="298.189" y="292.802" width="10.0724" height="18.2708"/>
+  <object id="28" x="522.701" y="292.229" width="10.0724" height="18.2708"/>
+  <object id="29" x="171.032" y="228.184" width="10.0724" height="18.2708"/>
+  <object id="30" x="74.8464" y="101.722" width="10.0724" height="18.2708"/>
+  <object id="31" x="303.536" y="751.46">
+   <ellipse/>
+  </object>
+ </objectgroup>
  <layer id="6" name="Wood_props" width="25" height="25">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
