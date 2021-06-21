@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum PlayerState {
     walking,
-    stopped
+    stopped,
+    attacking
 }
 public class PlayerController : MonoBehaviour
 {
@@ -39,12 +40,27 @@ public class PlayerController : MonoBehaviour
     }
 
     void ProcessInputs()
-    {
+    {   
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
 
-        moveDirection = new Vector3(moveX, moveY, myRigidbody.transform.position.z).normalized;
+        if(Input.GetButtonDown("Attack")&&playerState != PlayerState.attacking && playerState != PlayerState.stopped){
+            StartCoroutine(AttackCo());
+        }else if(playerState == PlayerState.walking){
+            moveDirection = new Vector3(moveX, moveY, myRigidbody.transform.position.z).normalized;
+        }
+
     }
+
+    private IEnumerator AttackCo(){
+        playerState = PlayerState.attacking;
+        animator.SetBool("attacking", true);
+        yield return null;
+        animator.SetBool("attacking", false);
+        yield return new WaitForSeconds(0.15f);
+        playerState = PlayerState.walking;
+    }
+
 
     void MovePlayer()
     {
