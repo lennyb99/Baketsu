@@ -14,12 +14,15 @@ public class PlayerController : MonoBehaviour
 
     public PlayerState playerState;
 
+    private Animator animator;
+
     
 
 
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         playerState = PlayerState.walking;
     }
 
@@ -32,6 +35,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         MovePlayer();
+        AnimatePlayer();
     }
 
     void ProcessInputs()
@@ -46,6 +50,16 @@ public class PlayerController : MonoBehaviour
     {
         if(playerState!=PlayerState.stopped){
             myRigidbody.MovePosition(transform.position + moveDirection * moveSpeed * Time.deltaTime);
+        }
+    }
+
+    void AnimatePlayer(){
+        if(moveDirection != Vector3.zero){
+            animator.SetFloat("walkX", moveDirection.x);
+            animator.SetFloat("walkY", moveDirection.y);
+            animator.SetBool("walking", true);
+        }else{
+            animator.SetBool("walking", false);
         }
     }
 
