@@ -246,8 +246,8 @@ MonoBehaviour:
   inDialogue: 0
   dialogue:
     portraits:
-    - {fileID: 21300000, guid: 4b699b63145cdc64cbebcece00c73fc6, type: 3}
-    - {fileID: 21300000, guid: 4b699b63145cdc64cbebcece00c73fc6, type: 3}
+    - {fileID: 21300000, guid: a53510684da600a4db039f7822b5b41a, type: 3}
+    - {fileID: 21300000, guid: 821a752ae667a444b8d4a338c9a50d81, type: 3}
     sentences:
     - That's my house!
     - It's boring
@@ -729,12 +729,12 @@ MonoBehaviour:
   dialogue:
     portraits:
     - {fileID: 8869442856293547957, guid: 26a2e6c2882e9c643976d98fff4db83f, type: 3}
-    - {fileID: 21300000, guid: 4b699b63145cdc64cbebcece00c73fc6, type: 3}
+    - {fileID: 21300000, guid: 821a752ae667a444b8d4a338c9a50d81, type: 3}
     - {fileID: 8869442856293547957, guid: 26a2e6c2882e9c643976d98fff4db83f, type: 3}
     sentences:
-    - "Hallo Bucket! Sch\xF6n dich zu sehen, wollen wir \nwas spielen ? "
-    - 'Hi Jerry, gerade kann ich nicht. Ich suche meinen Jojo.. '
-    - "Gestern waren wir doch noch auf dem H\xFCgel. Schau doch mal dort nach !"
+    - I like being naked
+    - You're disgusting
+    - Being naked is what I like
     right: 010001
 --- !u!61 &451222030
 BoxCollider2D:
@@ -1888,12 +1888,12 @@ MonoBehaviour:
   inDialogue: 0
   dialogue:
     portraits:
-    - {fileID: 21300000, guid: 4b699b63145cdc64cbebcece00c73fc6, type: 3}
+    - {fileID: 21300000, guid: a53510684da600a4db039f7822b5b41a, type: 3}
     - {fileID: -1424546796599349136, guid: e1f33fd568f0feb4c8229c12e8d3a2c7, type: 3}
-    - {fileID: 21300000, guid: 4b699b63145cdc64cbebcece00c73fc6, type: 3}
+    - {fileID: 21300000, guid: 821a752ae667a444b8d4a338c9a50d81, type: 3}
     sentences:
     - Hello Skunk, do you wanna be my raccoon sidekick?
-    - TRASH
+    - TRASH TRASH TRASH TRASH TRASH
     - .....okay
     right: 000000
 --- !u!61 &1317351101
