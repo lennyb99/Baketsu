@@ -30,8 +30,8 @@ public class Ghost : Enemy
 
     void CheckDistance(){
         if(Vector3.Distance(target.position,transform.position)<= chaseRadius &&
-                Vector3.Distance(target.position, transform.position)>= attackRadius){
-            Vector3 temp = Vector3.MoveTowards(transform.position,target.position, moveSpeed/100);
+                Vector3.Distance(target.position, transform.position)>= attackRadius && currentState != EnemyState.stagger){
+            Vector3 temp = Vector3.MoveTowards(transform.position,target.position, moveSpeed * Time.deltaTime);
             myRigidbody.MovePosition(temp);
             
         }
