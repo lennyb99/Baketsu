@@ -116,6 +116,7 @@ public class DialogueManager : MonoBehaviour
         
         // Zurücksetzen der Dialogbox
         dialogueText.text = "";
+        
         speaker.sprite = null;
         diaBoxInScreen = false;
 
