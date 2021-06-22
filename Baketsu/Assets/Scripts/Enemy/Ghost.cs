@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Wasp : Enemy
+public class Ghost : Enemy
 {   
     public Transform target;
     public float chaseRadius;
