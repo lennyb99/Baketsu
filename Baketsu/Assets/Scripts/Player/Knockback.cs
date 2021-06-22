@@ -39,7 +39,6 @@ public class Knockback : MonoBehaviour
     private IEnumerator KnockCo(Rigidbody2D enemyBody, GameObject enemy){
         if(enemyBody != null){
             
-            enemy.GetComponent<Enemy>().GetAttacked();
             
             
             yield return new WaitForSeconds(knocktime);

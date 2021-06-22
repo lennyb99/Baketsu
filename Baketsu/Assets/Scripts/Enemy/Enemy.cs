@@ -30,15 +30,32 @@ public class Enemy : MonoBehaviour
         
     }
 
-    public void GetAttacked(){
-        health--;
-        StartCoroutine(ColorChange());
-    }
+    
 
     private IEnumerator ColorChange(){
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.1f);
         spriteRenderer.color = Color.white;
+    }
+
+    public void Knock(Rigidbody2D myRigidbody){
+        health--;
+        StartCoroutine(ColorChange());
+        StartCoroutine(KnockCo(myRigidbody));
+    }
+
+    private IEnumerator KnockCo(Rigidbody2D myRigidbody)
+    {
+        
+        yield return new WaitForSeconds(.3f);
+    
+        myRigidbody.velocity = Vector2.zero;
+        currentState = EnemyState.walking;
+
+        if(health <= 0){
+            this.gameObject.SetActive(false);
+        }
+        
     }
 }
