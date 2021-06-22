@@ -9,6 +9,7 @@ public class Ghost : Enemy
     public float attackRadius;
     public Transform homePos;
 
+
     private Rigidbody2D myRigidbody;
 
     // Start is called before the first frame update
@@ -26,11 +27,13 @@ public class Ghost : Enemy
         CheckDistance();
     }
 
+   
+
     
 
     void CheckDistance(){
         if(Vector3.Distance(target.position,transform.position)<= chaseRadius &&
-                Vector3.Distance(target.position, transform.position)>= attackRadius && currentState != EnemyState.stagger){
+                Vector3.Distance(target.position, transform.position)>= attackRadius && currentState != EnemyState.stagger && currentState != EnemyState.attack){
             Vector3 temp = Vector3.MoveTowards(transform.position,target.position, moveSpeed * Time.deltaTime);
             myRigidbody.MovePosition(temp);
             

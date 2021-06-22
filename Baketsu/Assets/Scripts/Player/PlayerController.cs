@@ -5,7 +5,8 @@ using UnityEngine;
 public enum PlayerState {
     walking,
     stopped,
-    attacking
+    attacking,
+    stagger
 }
 public class PlayerController : MonoBehaviour
 {
@@ -68,8 +69,22 @@ public class PlayerController : MonoBehaviour
 
     void MovePlayer()
     {
-        if(playerState!=PlayerState.stopped){
+        if(playerState!=PlayerState.stopped && playerState!=PlayerState.stagger){
             myRigidbody.MovePosition(transform.position + moveDirection * moveSpeed * Time.deltaTime);
+        }
+    }
+
+
+    public void Knock(){
+        StartCoroutine(KnockCo());
+    }
+    private IEnumerator KnockCo()
+    {
+        if(myRigidbody != null){
+
+            yield return new WaitForSeconds(.3f);
+            myRigidbody.velocity = Vector2.zero;
+            playerState = PlayerState.walking;
         }
     }
 
