@@ -18,10 +18,13 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+    public Vector3 spawn;
+
     public int health;
 
     Camera mainCam;
 
+    private CameraController cam;
     
 
 
@@ -30,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         playerState = PlayerState.walking;
+        transform.position = spawn;
     }
 
     // Update is called once per frame
@@ -87,6 +91,7 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(.3f);
             myRigidbody.velocity = Vector2.zero;
             playerState = PlayerState.walking;
+            GetDamage();
         }
     }
 
@@ -102,6 +107,27 @@ public class PlayerController : MonoBehaviour
 
     public void SetPlayerState(PlayerState plState){
         playerState = plState;
+    }
+
+    public void GetDamage(){
+        health--;
+        if(health <= 0){
+            StartCoroutine(Respawn());
+        }
+    }
+
+    private IEnumerator Respawn(){
+        cam = Camera.main.GetComponent<CameraController>();
+        cam.target.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        playerState = PlayerState.stopped;
+        yield return new WaitForSeconds(1f);
+        transform.position = spawn;
+        cam.target = transform;
+        cam.SetMinPosition(new Vector2(5.342f,-28.991f));
+        cam.SetMaxPosition(new Vector2(26.663f, -3f));
+        yield return new WaitForSeconds(1f);
+        health = 5;
+        playerState = PlayerState.walking;
     }
 
     

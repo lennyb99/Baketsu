@@ -18,7 +18,7 @@ public class Knockback2 : MonoBehaviour
             Rigidbody2D hit = collision.GetComponent<Rigidbody2D>();
    
             if (hit != null){
-                if(collision.gameObject.CompareTag("Enemy")){
+                if(collision.gameObject.CompareTag("Enemy") && !(this.gameObject.CompareTag("Enemy"))){
                     
                     if(hit.GetComponent<Enemy>().currentState != EnemyState.stagger){
                         hit.GetComponent<Enemy>().currentState = EnemyState.stagger; 
@@ -35,6 +35,7 @@ public class Knockback2 : MonoBehaviour
                         hit.GetComponent<PlayerController>().playerState != PlayerState.stagger){
                         hit.GetComponent<PlayerController>().playerState = PlayerState.stagger;
                         hit.GetComponent<PlayerController>().Knock();
+                        
 
                         Vector2 difference = hit.transform.position - transform.position;
                         difference = difference.normalized * thrust;
