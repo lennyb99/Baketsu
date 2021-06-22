@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+    Camera mainCam;
+
     
 
 
@@ -43,6 +45,8 @@ public class PlayerController : MonoBehaviour
     {   
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
+
+
 
         if(Input.GetButtonDown("Attack")&&playerState != PlayerState.attacking && playerState != PlayerState.stopped){
             StartCoroutine(AttackCo());
