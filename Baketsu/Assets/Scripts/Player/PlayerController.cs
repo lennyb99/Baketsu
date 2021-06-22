@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+    public int health;
+
     Camera mainCam;
 
     

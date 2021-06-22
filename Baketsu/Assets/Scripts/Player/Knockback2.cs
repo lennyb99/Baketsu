@@ -40,7 +40,7 @@ public class Knockback2 : MonoBehaviour
                         difference = difference.normalized * thrust;
 
                         hit.AddForce(difference, ForceMode2D.Impulse);
-                        Debug.Log("exec");
+                        Debug.Log("player got hit");
                     }
                 }
             }

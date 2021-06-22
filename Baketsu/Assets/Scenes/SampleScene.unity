@@ -3968,7 +3968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d631b36bce4ba904498580a363a2a4f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 20
+  thrust: 5
 --- !u!1 &2117545947
 GameObject:
   m_ObjectHideFlags: 0
@@ -4058,7 +4058,6 @@ Transform:
   - {fileID: 1530067212}
   - {fileID: 232518034}
   - {fileID: 963460374}
-  - {fileID: 1388592271}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
