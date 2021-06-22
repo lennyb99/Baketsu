@@ -43,5 +43,9 @@ public class CameraController : MonoBehaviour
     public void SetMaxPosition(Vector2 vector){
         maxPosition = vector;
     }
+
+    public void SetCamSize(float size){
+        Camera.main.orthographicSize = size;
+    }
     
 }

@@ -5,12 +5,12 @@ using UnityEngine;
 public class RoomMovement : MonoBehaviour
 {
 
-    public Vector2 cameraChange;
 
     public Vector3 playerChange;
 
     public Vector2 maxPosition;
     public Vector2 minPosition;
+    public float zoom;
 
     private CameraController cam;
 
@@ -31,6 +31,7 @@ public class RoomMovement : MonoBehaviour
         if(other.CompareTag("MovementHitbox")){
             cam.SetMaxPosition(maxPosition);
             cam.SetMinPosition(minPosition);
+            cam.SetCamSize(zoom);
             
             GameObject player = other.transform.parent.gameObject;
             player.transform.position += playerChange;
