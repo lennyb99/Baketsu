@@ -37,14 +37,18 @@ public class DialoguePartner : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D other){
-        Debug.Log("entered");
-        playerInRange = true;
-        player = other.gameObject;      
+        if(other.CompareTag("ChatHitbox")){
+            Debug.Log("entered");
+            playerInRange = true;
+            player = other.gameObject;     
+        } 
     }
 
     public void OnTriggerExit2D(Collider2D other){
-        playerInRange = false;
-        inDialogue = false;
+        if(other.CompareTag("ChatHitbox")){
+            playerInRange = false;
+            inDialogue = false;
+        }
     }
 
     private void startDialogue(){
