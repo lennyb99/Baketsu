@@ -37,6 +37,7 @@ public class DialoguePartner : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D other){
+        Debug.Log("entered");
         playerInRange = true;
         player = other.gameObject;      
     }
