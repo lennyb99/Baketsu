@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d85d9aab46eac8443a174b233e132749
+guid: 3a57d3a91d68948e69d08ac684e3f7c5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -7,19 +7,18 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-  script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
   missingFiles: []
-  errors: []
+  errors:
+  - 'Missing texture asset: ../../../../../../../../../../Downloads/cars2.png'
   warnings: []
   missingSortingLayers: []
   missingLayers: []
   missingTags: []
-  importerVersion: 22
-  pixelsPerUnit: 32
+  importerVersion: 11
+  pixelsPerUnit: 100
   edgesPerEllipse: 32
   numberOfObjectsImported: 2
-  tilesAsObjects: 0
-  sortingMode: 0
-  isIsometric: 0
-  customImporterClassName: 
-  internalTilesets: []
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048
