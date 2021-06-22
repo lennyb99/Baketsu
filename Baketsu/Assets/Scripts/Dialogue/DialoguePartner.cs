@@ -38,7 +38,6 @@ public class DialoguePartner : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other){
         if(other.CompareTag("ChatHitbox")){
-            Debug.Log("entered");
             playerInRange = true;
             player = other.gameObject;     
         } 

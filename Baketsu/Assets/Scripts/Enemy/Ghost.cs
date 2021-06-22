@@ -26,6 +26,8 @@ public class Ghost : Enemy
         CheckDistance();
     }
 
+    
+
     void CheckDistance(){
         if(Vector3.Distance(target.position,transform.position)<= chaseRadius &&
                 Vector3.Distance(target.position, transform.position)>= attackRadius){
