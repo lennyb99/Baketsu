@@ -6,6 +6,7 @@ TagManager:
   tags:
   - MovementHitbox
   - ChatHitbox
+  - Enemy
   layers:
   - Default
   - TransparentFX
