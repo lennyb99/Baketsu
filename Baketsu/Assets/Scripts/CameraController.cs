@@ -35,5 +35,13 @@ public class CameraController : MonoBehaviour
                                                 smoothing);
         }
     }
+
+    public void SetMinPosition(Vector2 vector){
+        minPosition = vector;
+    }
+
+    public void SetMaxPosition(Vector2 vector){
+        maxPosition = vector;
+    }
     
 }

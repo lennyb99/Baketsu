@@ -9,6 +9,9 @@ public class RoomMovement : MonoBehaviour
 
     public Vector3 playerChange;
 
+    public Vector2 maxPosition;
+    public Vector2 minPosition;
+
     private CameraController cam;
 
     // Start is called before the first frame update
@@ -26,9 +29,9 @@ public class RoomMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other){
 
         if(other.CompareTag("MovementHitbox")){
-            cam.minPosition += cameraChange;
-            cam.maxPosition += cameraChange;
-
+            cam.SetMaxPosition(maxPosition);
+            cam.SetMinPosition(minPosition);
+            
             GameObject player = other.transform.parent.gameObject;
             player.transform.position += playerChange;
             
