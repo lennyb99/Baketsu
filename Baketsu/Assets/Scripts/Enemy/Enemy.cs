@@ -29,4 +29,16 @@ public class Enemy : MonoBehaviour
     {
         
     }
+
+    public void GetAttacked(){
+        health--;
+        StartCoroutine(ColorChange());
+    }
+
+    private IEnumerator ColorChange(){
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        spriteRenderer.color = Color.white;
+    }
 }
