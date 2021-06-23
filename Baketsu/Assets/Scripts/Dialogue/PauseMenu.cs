@@ -13,7 +13,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Tab)){
 
-            if(controls.active == false){
+            if(controls.activeInHierarchy == false){
                 controls.SetActive(true);
             }else{
                 controls.SetActive(false);
