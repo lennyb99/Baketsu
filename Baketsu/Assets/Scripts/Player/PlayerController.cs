@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private CameraController cam;
     
-
+    public GameObject controls;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
         playerState = PlayerState.walking;
         transform.position = spawn;
         fighting = false;
+        StartCoroutine(deleteControls());
     }
 
     // Update is called once per frame
@@ -135,6 +136,12 @@ public class PlayerController : MonoBehaviour
 
     public int GetHealth(){
         return health;
+    }
+
+    private IEnumerator deleteControls(){
+
+        yield return new WaitForSeconds(5f);
+        controls.SetActive(false);
     }
 
     
