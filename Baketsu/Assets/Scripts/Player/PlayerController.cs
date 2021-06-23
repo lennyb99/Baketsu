@@ -133,5 +133,9 @@ public class PlayerController : MonoBehaviour
         playerState = PlayerState.walking;
     }
 
+    public int GetHealth(){
+        return health;
+    }
+
     
 }
