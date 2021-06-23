@@ -54,7 +54,7 @@ public class DialogueManager : MonoBehaviour
         foreach(bool right in dialogue.right){
             positions.Enqueue(right);
         }
-
+        
         DisplayNextSentence();
     }
 
