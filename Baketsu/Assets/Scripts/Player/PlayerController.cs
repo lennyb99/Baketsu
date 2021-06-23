@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     private Animator animator;
 
+    public bool fighting;
+
     public Vector3 spawn;
 
     public int health;
@@ -34,6 +36,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         playerState = PlayerState.walking;
         transform.position = spawn;
+        fighting = false;
     }
 
     // Update is called once per frame
@@ -55,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        if(Input.GetButtonDown("Attack")&&playerState != PlayerState.attacking && playerState != PlayerState.stopped){
+        if(Input.GetButtonDown("Attack")&&playerState != PlayerState.attacking && playerState != PlayerState.stopped && fighting == true){
             StartCoroutine(AttackCo());
         }else if(playerState == PlayerState.walking){
             moveDirection = new Vector3(moveX, moveY, myRigidbody.transform.position.z).normalized;
