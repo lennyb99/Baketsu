@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="25">
+<map version="1.5" tiledversion="1.6.0" orientation="orthogonal" renderorder="right-down" width="32" height="32" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="37">
  <tileset firstgid="1" source="terrain.tsx"/>
  <tileset firstgid="1961" source="Japanese_city.tsx"/>
  <tileset firstgid="2505" source="terrain_plants.tsx"/>
@@ -301,8 +301,8 @@
   <object id="5" x="0" y="439.455" width="58.5405" height="381.716"/>
   <object id="6" x="58.5405" y="742.582" width="29.6712" height="75.3809"/>
   <object id="7" x="1.60385" y="283.079" width="157.979" height="63.352"/>
-  <object id="8" x="4.00962" y="66.5597" width="28.8693" height="29.6712"/>
-  <object id="9" x="1.60385" y="222.935" width="29.6712" height="32.077"/>
+  <object id="8" x="4.00962" y="11.0555" width="28.8693" height="85.1754"/>
+  <object id="9" x="1.60385" y="173.835" width="29.6712" height="81.1768"/>
   <object id="11" x="61.7482" y="12.8308" width="61.7482" height="42.502">
    <ellipse/>
   </object>
@@ -317,13 +317,30 @@
   <object id="16" x="169.315" y="160.404" width="112.134" height="442.596"/>
   <object id="17" x="164.765" y="0.755801" width="116.393" height="108.835"/>
   <object id="18" x="299.881" y="45.5785"/>
-  <object id="19" x="286.823" y="103.485" width="29.7431" height="18.9849"/>
-  <object id="20" x="283.004" y="158.995" width="33.8206" height="13.9947"/>
-  <object id="21" x="133.339" y="157.829" width="35.7643" height="20.2146"/>
-  <object id="22" x="133.339" y="113.124" width="27.2119" height="12.4397"/>
+  <object id="20" x="129.07" y="157.213" width="187.754" height="15.7763"/>
+  <object id="22" x="127.638" y="113.124" width="191.123" height="16.3593"/>
   <object id="23" x="771.292" y="296.333">
    <polygon points="0,0 192.398,-1.68478 194.078,-144.049 192.398,-216.494 -6.72133,-219.021"/>
   </object>
   <object id="24" x="-1.30634" y="842.587" width="113.651" height="178.315"/>
+  <object id="25" x="65.0586" y="198.274" width="29.21" height="43.815"/>
+  <object id="26" x="0.442576" y="0.885152" width="163.31" height="2.21288"/>
+  <object id="28" x="278.84" y="-1.59337" width="266.093" height="4.24899"/>
+  <object id="29" x="636.286" y="0.0200197" width="387.516" height="2.22763"/>
+  <object id="30" x="694.344" y="142.778">
+   <polygon points="0,0 10.1984,-13.173 10.1984,-26.346 -14.4478,-28.4707 -20.8218,-53.5418 -14.8727,-80.3128 -0.424935,-96.8852 12.7481,-102.834 29.7455,-103.684 47.1678,-98.16 60.7657,-86.6868 67.9896,-74.3637 68.4146,-59.066 66.2899,-29.3205 39.9439,-17.8473 47.5927,-6.37403 45.4681,4.24935 17.4223,7.64883"/>
+  </object>
+  <object id="31" x="807.514" y="70.0967">
+   <polygon points="0,0 9.81354,-7.85083 13.4586,-13.4586 13.1782,-21.8702 22.1506,-26.9171 31.9641,-24.9544 36.1699,-20.1879 38.1326,-9.25277 49.0677,-3.64503 45.9835,0.841161 41.7777,3.36464 12.6174,5.88813"/>
+  </object>
+  <object id="32" x="939.577" y="64.489">
+   <polygon points="0,0 -6.16851,-15.4213 8.97238,-22.431 6.4489,-28.8799 21.029,-51.3108 35.0484,-60.2832 35.8895,-62.8067"/>
+  </object>
+  <object id="33" x="965.906" y="156.954">
+   <polygon points="0,0 11.8545,2.3709 16.5963,0.948362 22.2865,-1.89672 18.0189,-62.1177 27.0283,-62.1177 42.2021,-71.6013 47.8923,-72.5497 50.2632,-92.4653 56.4275,-92.4653 56.9017,384.561 58.3242,-96.7329 1.89672,-84.4042"/>
+  </object>
+  <object id="34" x="1019.08" y="641.228" width="5.58399" height="383.434"/>
+  <object id="35" x="281.992" y="1015.36" width="737.143" height="8.5778"/>
+  <object id="36" x="115.769" y="1015.89" width="45.2117" height="7.53528"/>
  </objectgroup>
 </map>
